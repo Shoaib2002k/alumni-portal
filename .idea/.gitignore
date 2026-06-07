@@ -1,0 +1,10 @@
+target/
+*.class
+*.war
+*.ear
+.idea/
+.classpath
+.project
+.settings/
+~$*
+*.docx

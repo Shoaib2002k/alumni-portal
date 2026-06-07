@@ -1,0 +1,270 @@
+/* ===== GLOBAL VARIABLES ===== */
+:root{
+    --brand-maroon:#7a0f1b;
+    --brand-green:#0b4b3b;
+}
+
+/* ===== GENERAL ===== */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+    background:var(--brand-green);
+    color:#fff;
+    font-size:14px;
+    padding:8px 0;
+    position:sticky;
+    top:0;
+    z-index:3000;
+}
+
+.topbar-text{
+    font-weight:600;
+    letter-spacing:0.3px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-links{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.social-links a{
+    width:34px;
+    height:34px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    color:#fff;
+    text-decoration:none;
+    transition:all .25s ease;
+    font-size:16px;
+}
+
+.social-links a:hover{
+    background:#fff;
+    color:var(--brand-green);
+    transform:translateY(-2px);
+}
+
+/* ===== NAVBAR ===== */
+.main-navbar{
+    background:var(--brand-maroon);
+    position:sticky;
+    top:50px;
+    z-index:2500;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    transition:all .35s ease;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+
+/* NAVBAR SHRINK EFFECT */
+.main-navbar.shrink{
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+/* ===== BRAND AREA ===== */
+.brand-area{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-left:0;
+}
+
+/* ===== LOGO ===== */
+.site-logo{
+    height:85px;
+    width:auto;
+    object-fit:contain;
+}
+
+/* ===== BRAND TEXT ===== */
+.navbar-brand-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.navbar-brand-text .line1{
+    font-size:22px;
+    font-weight:700;
+    color:#fff;
+}
+
+.navbar-brand-text .line2{
+    font-size:17px;
+    font-weight:500;
+    color:#fff;
+}
+
+/* ===== NAV MENU ===== */
+.nav-menu{
+    gap:18px;
+}
+
+.nav-menu .nav-link{
+    font-weight:600;
+    letter-spacing:.4px;
+}
+
+/* ===== DEFAULT NAV LINKS ===== */
+.main-navbar .nav-link{
+    color:#fff !important;
+    font-weight:600;
+    white-space:nowrap;
+    margin:0;
+    padding-left:0;
+    padding-right:0;
+}
+
+.main-navbar .nav-link:hover{
+    color:#ffd54f !important;
+}
+
+/* ===== BUTTON ===== */
+.alumni-btn{
+    min-width:190px;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:700;
+    white-space:nowrap;
+    text-align:center;
+}
+
+/* ===== HERO BANNER ===== */
+.hero-banner{
+    position:relative;
+    min-height:470px;
+    background:linear-gradient(rgba(122,15,27,0.45),rgba(11,75,59,0.30)),
+    url('../img/hero.png') center center/cover no-repeat;
+    display:flex;
+    align-items:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,0.58),rgba(0,0,0,0.25));
+}
+
+.hero-content-wrap{
+    position:relative;
+    z-index:2;
+}
+
+.hero-box{
+    max-width:700px;
+    color:#fff;
+}
+
+.hero-title{
+    font-size:56px;
+    font-weight:800;
+}
+
+.hero-subtitle{
+    font-size:20px;
+}
+
+/* ===== SECTIONS ===== */
+.section-title{
+    color:var(--brand-maroon);
+    font-weight:800;
+}
+
+.content-section{
+    padding:80px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background:var(--brand-green);
+    color:#fff;
+}
+
+.footer a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+
+.footer .social-btn{
+    width:42px;
+    height:42px;
+    border-radius:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,0.35);
+    color:#fff;
+}
+
+@media (max-width:1199px){
+    .navbar-brand-text .line1{
+        font-size:18px;
+    }
+
+    .nav-menu{
+        gap:12px;
+    }
+
+    .alumni-btn{
+        min-width:170px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:991px){
+    .main-navbar .navbar-collapse{
+        background:var(--brand-maroon);
+        padding:12px;
+        border-radius:10px;
+        margin-top:10px;
+    }
+
+    .brand-area{
+        gap:14px;
+        margin-right:0;
+    }
+
+    .site-logo{
+        height:54px;
+    }
+
+    .navbar-brand-text .line1{
+        font-size:16px;
+        white-space:normal;
+    }
+
+    .navbar-brand-text .line2{
+        font-size:14px;
+    }
+
+    .alumni-btn{
+        min-width:auto;
+        margin-top:12px;
+    }
+
+    .hero-banner{
+        min-height:350px;
+    }
+
+    .hero-title{
+        font-size:36px;
+    }
+}
